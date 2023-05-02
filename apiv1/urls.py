@@ -3,11 +3,11 @@ from .import views
 
 urlpatterns=[
     path('',views.land),
-    path('register/',views.signup),
-    path('login/',views.login),
-    path('search/<str:term>',views.search),
-    path('create/',views.create),
-    path('view/',views.view),
-    path('update/',views.update),
+    path('register_user/',views.signup),
+    path('login_user/',views.login),
+    path('search_incident/<str:term>',views.search),
+    path('create_incident/',views.create),
+    path('view_incident/',views.view),
+    path('update_incident/',views.update),
     
 ]

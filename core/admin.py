@@ -4,5 +4,5 @@ from .models import Incidents
 
 @admin.register(Incidents)
 class IncAdmin(admin.ModelAdmin):
-    list_display=['id','reporter','status','priority','reportedOn']
+    list_display=['id','reporter','details','status','priority','reportedOn','updatedOn']
     list_filter=['reporter']

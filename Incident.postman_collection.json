@@ -1,0 +1,135 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Incident",
+		"_postman_id": "2b44d074-59fd-845f-6e1f-878d08969274",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create_incident",
+			"request": {
+				"url": "http://localhost:12345/apiv1/create_incident/",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgzMDA5MDYwLCJpYXQiOjE2ODMwMDU0NjAsImp0aSI6ImY3NjA5MTdiZWYxZDQyMGJhZjVlZWY3MjJlYzBhM2NkIiwidXNlcl9pZCI6Mn0.qHZi4Og1vV6EjbbOsg9QKtv_sR2JbfVqGtJrJIICBaM",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"priority\": \"high\", \"details\": \"serious activity 123\"}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "login_user",
+			"request": {
+				"url": "http://localhost:12345/apiv1/login_user/",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\":\"test1@a.com\",\n\t\"password\":\"123\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "register_user",
+			"request": {
+				"url": "http://localhost:12345/apiv1/register_user/",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\":\"test1@a.com\",\n\t\"password\":\"123\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "view_incident",
+			"request": {
+				"url": "http://localhost:12345/apiv1/view_incident/",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgzMDA5MDYwLCJpYXQiOjE2ODMwMDU0NjAsImp0aSI6ImY3NjA5MTdiZWYxZDQyMGJhZjVlZWY3MjJlYzBhM2NkIiwidXNlcl9pZCI6Mn0.qHZi4Og1vV6EjbbOsg9QKtv_sR2JbfVqGtJrJIICBaM",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "search_incident",
+			"request": {
+				"url": "http://localhost:12345/apiv1/search_incident/RMG539,1720",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgzMDA1Mjg2LCJpYXQiOjE2ODMwMDQ5ODYsImp0aSI6IjliNDkzNGQ2MzEyMzRiNWY5ZGZiN2IyNTg5ZTNmYzk3IiwidXNlcl9pZCI6Mn0.wW_pxKZKGs3zyq5QxWr8Uc7c7-sQbN72nMV_-9Cci0g",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "update_incident",
+			"request": {
+				"url": "http://localhost:12345/apiv1/update_incident/",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgzMDA5MDYwLCJpYXQiOjE2ODMwMDU0NjAsImp0aSI6ImY3NjA5MTdiZWYxZDQyMGJhZjVlZWY3MjJlYzBhM2NkIiwidXNlcl9pZCI6Mn0.qHZi4Og1vV6EjbbOsg9QKtv_sR2JbfVqGtJrJIICBaM",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"id\": \"RMG710342023\",\"status\":\"open\" ,\"priority\": \"low\", \"details\": \"extreme temperature \"}\n"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

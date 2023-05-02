@@ -4,6 +4,7 @@ import uuid
 import random
 import datetime
 
+
 def gen_incid_id():
 
     return f""
@@ -35,7 +36,8 @@ class Incidents(models.Model):
     status=models.CharField(
 
         choices=status_opts,
-        max_length=9999
+        max_length=9999,
+        default='open'
         
     )
 
