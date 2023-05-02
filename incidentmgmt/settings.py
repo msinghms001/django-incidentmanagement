@@ -1,7 +1,7 @@
 
-
 from pathlib import Path
 from dotenv import load_dotenv
+from datetime import timedelta
 
 load_dotenv()
 
@@ -70,6 +70,13 @@ WSGI_APPLICATION = 'incidentmgmt.wsgi.application'
 
 DATABASES = {
     'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'dbsqlite3',
+        'HOST':'localhost',
+        'USER':'root',
+        'PASSWORD':'password'
+    },
+    'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
@@ -109,5 +116,14 @@ STATIC_ROOT='devstatic'
 MEDIA_ROOT='uploads'
 MEDIA_URL='media/'
 
-# AUTH_USER_MODEL='django.User'
+REST_FRAMEWORK = {
+   
+     'DEFAULT_AUTHENTICATION_CLASSES': (
+        
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    )
+}
 
+AUTHENTICATION_BACKEND=[
+    "django.contrib.auth.backends.ModelBackend"
+]
